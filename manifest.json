@@ -1,0 +1,43 @@
+{
+  "name": "Generative Link Previews",
+  "version": "0.2",
+  "manifest_version": 3,
+  "description": "Generative Link Previews",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "aiLanguageModelOriginTrial"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhZyz9Vpeu7brO1FDuW0KWGTLZHUwj2G22P+t9L/hEG9VSJZnLWhZOrZ0VXLYnIKWAknYB/nraqD2vc8b1oQePhYQwvdCVCvAslvYStBMI2X6rMhX0kxj4UjqdwOoROx61KQ8cU8wVG7fN07Y31UBRfLtXLwhg88cVR98p92UUZCg3QN3dEjtL+1JUVck8ZmAWcUTzf4a+b7wfpCwHZkl+JvSTLLX7fkXfRvpiVHnKjiNkVAc7BClm4hpF/H+WaZAb3JiliMidzL/b3htO1cqSl6bCc4CYOraxnfKWuIs8qUkngsBNXfRuuI4xQ4RnkTosqou/DXqXVNG7EBgKLdH5QIDAQAB",
+  "trial_tokens": [
+    "Ag4V6ab+4MbRJhG7eVTUqkMeR6dhq2mSSio4kb/ZHlzmvqlfAmj0gLaI5PZtO+uC50PU/hpOpOhK4quvZNnmtg8AAAB4eyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vZWRiYmFlam5qZm1nZGNjbm9icGVwcGNlYW9qbGtoZWwiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElGb3JFeHRlbnNpb24iLCJleHBpcnkiOjE3NjA0ODYzOTl9"
+  ],
+  "minimum_chrome_version": "131",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "Open Chat Interface"
+  },
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_script.js",
+        "marked.min.js"
+      ]
+    }
+  ]
+}

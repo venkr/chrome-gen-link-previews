@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: system-ui, -apple-system, sans-serif;
+      border-radius: 8px;
+      background-color: #fafaf6;
+      margin-top: 0px;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .model-description {
+      font-size: 13px;
+      color: #666;
+      margin: 8px 0;
+      display: none;
+    }
+
+    .model-description.active {
+      display: block;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    input[type="radio"] {
+      margin: 0;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generative Link Previews</h1>
+  
+  <h2>Model</h2>
+  <div class="radio-group">
+    <label class="radio-option">
+      <input type="radio" name="model" value="nano" checked>
+      Gemini Nano (local)
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="model" value="pro">
+      Gemini Pro (cloud)
+    </label>
+  </div>
+
+  <div id="nano-description" class="model-description active">
+    Process text locally with Gemini Nano. Data never leaves your device, but capabilities are more limited.
+  </div>
+  <div id="pro-description" class="model-description">
+    Access the full power of Gemini Pro in the cloud. More accurate results, and supports more languages.
+  </div>
+
+  <h2>Language</h2>
+  <select id="language">
+    <option value="Arabic">Arabic</option>
+    <option value="Bengali">Bengali</option>
+    <option value="Bulgarian">Bulgarian</option>
+    <option value="Chinese">Chinese</option>
+    <option value="Croatian">Croatian</option>
+    <option value="Czech">Czech</option>
+    <option value="Danish">Danish</option>
+    <option value="Dutch">Dutch</option>
+    <option value="English" selected>English</option>
+    <option value="Estonian">Estonian</option>
+    <option value="Finnish">Finnish</option>
+    <option value="French">French</option>
+    <option value="German">German</option>
+    <option value="Greek">Greek</option>
+    <option value="Hebrew">Hebrew</option>
+    <option value="Hindi">Hindi</option>
+    <option value="Hungarian">Hungarian</option>
+    <option value="Indonesian">Indonesian</option>
+    <option value="Italian">Italian</option>
+    <option value="Japanese">Japanese</option>
+    <option value="Korean">Korean</option>
+    <option value="Latvian">Latvian</option>
+    <option value="Lithuanian">Lithuanian</option>
+    <option value="Norwegian">Norwegian</option>
+    <option value="Polish">Polish</option>
+    <option value="Portuguese">Portuguese</option>
+    <option value="Romanian">Romanian</option>
+    <option value="Russian">Russian</option>
+    <option value="Serbian">Serbian</option>
+    <option value="Slovak">Slovak</option>
+    <option value="Slovenian">Slovenian</option>
+    <option value="Spanish">Spanish</option>
+    <option value="Swahili">Swahili</option>
+    <option value="Swedish">Swedish</option>
+    <option value="Thai">Thai</option>
+    <option value="Turkish">Turkish</option>
+    <option value="Ukrainian">Ukrainian</option>
+    <option value="Vietnamese">Vietnamese</option>
+  </select>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
+
