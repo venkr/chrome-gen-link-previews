@@ -1,8 +1,6 @@
-<img src="images/link-icon.webp" width="100">
-
 # Generative Link Previews
 
-<img src="GLP.gif" width="450">
+<img src="GLP.gif" width="800">
 
 
 Generative Link Previews lets you get a useful high level understanding of a link by Shift + hovering over it.
