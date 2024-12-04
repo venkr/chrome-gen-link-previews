@@ -1,10 +1,9 @@
-<img src="images/link-icon.webp" width="250">
+<img src="images/link-icon.webp" width="100">
 
 # Generative Link Previews
 
-The Internet is overwhelming - it's easy to end up with dozens, or hundreds of open tabs. How do you get the benefits of all this information, while staying on track?
+<img src="GLP.gif" width="450">
 
-<img src="image-1.png" width="450">
 
 Generative Link Previews lets you get a useful high level understanding of a link by Shift + hovering over it.
 It's been carefully prompt engineered to ensure that it doesn't give vague general answers, instead focusing on pulling out the specific details that are most useful to you!
